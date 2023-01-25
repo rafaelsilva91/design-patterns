@@ -1,0 +1,13 @@
+package singleton;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		SecurityManager sml = new SecurityManager();
+		sml.login();
+		
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package singleton;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		SecurityManager sm1 = new SecurityManager();
+		sm1.login();
+		
+		SecurityManager sm2 = new SecurityManager();
+		sm2.login();
+		
+//		SecurityManager s = SecurityManager.getInstance();
+		
+	}
+
+}

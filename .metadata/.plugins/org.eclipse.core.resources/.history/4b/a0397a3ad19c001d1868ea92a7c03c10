@@ -1,0 +1,22 @@
+package singleton;
+
+public class SecurityManager3 {
+	
+//	private static SecurityManager2 instance = new SecurityManager2();
+	
+	private static SecurityManager3 instance;
+		
+	private SecurityManager3() {}
+	
+	public synchronized static SecurityManager3 getInstance() {
+		if(instance == null) {
+			instance = new SecurityManager3();
+		}
+		return instance;
+	}
+
+	public void login() {
+		System.out.println("Executou o login Exemplo2");
+	}
+
+}

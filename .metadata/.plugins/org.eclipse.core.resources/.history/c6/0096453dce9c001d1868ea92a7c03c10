@@ -1,0 +1,15 @@
+package singleton;
+
+public class SecurityManager {
+	
+	
+	
+	private SecurityManager() {
+		
+	}
+
+	public void login() {
+		
+	}
+
+}
