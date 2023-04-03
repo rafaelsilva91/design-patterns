@@ -7,12 +7,12 @@ import com.developer.factorymethod.contatos.Contatos;
 
 import java.util.List;
 
-public class MalaDireta {
+public abstract class MalaDireta {
 
-    public boolean sendMessage(String fileName, String message) {
+    protected abstract Contatos criarContatos();
 
-        Contatos contatosRepositorio = new Contatos();
-        List<Contato> contatos = contatosRepositorio.recuperarContatosCSV(fileName);
+    public boolean sendMessage(String message) {
+        List<Contato> contatos = criarContatos().todos();
 
         System.out.println("Conectando no servidor SMTP...");
         System.out.println("Mensagem a ser enviada: "+message);
@@ -20,7 +20,7 @@ public class MalaDireta {
 
         for(Contato contato : contatos){
             System.out.println("From: <contato@algaworks.com>");
-            System.out.printf("To: [%s] <%s>\n", contato.getName(), contato.getEmail());
+            System.out.printf("To: [%s] <%s>\n", contato.getNome(), contato.getEmail());
             System.out.println(message);
             System.out.println();
         }

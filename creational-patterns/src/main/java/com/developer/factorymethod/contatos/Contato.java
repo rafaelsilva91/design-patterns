@@ -2,23 +2,23 @@ package com.developer.factorymethod.contatos;
 
 public class Contato {
 
-    private String name;
+    private String nome;
     private String email;
 
     public Contato() {
     }
 
-    public Contato(String name, String email) {
-        this.name = name;
+    public Contato(String nome, String email) {
+        this.nome = nome;
         this.email = email;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {
